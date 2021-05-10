@@ -2,6 +2,12 @@
 	"name": "valor-metro-quadrado",
 	"version": "1.0.0",
 	"description": "Api que retorna o valor do metro quadrado",
+	"author": "Herbert Hudson",
+	"keywords": [
+		"Nodejs",
+		"API"
+	],
+	"license": "MIT",
 	"main": "src/index.js",
 	"scripts": {
 		"start": "node src/index.js",
@@ -9,6 +15,12 @@
 		"lint": "eslint --ext js,jsx,ts,tsx .",
 		"test": "jest --env node --detectOpenHandles",
 		"prepare": "husky install"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged",
+			"pre-push": "npm run test"
+		}
 	},
 	"lint-staged": {
 		"*.{ts,js,tsx,jsx}": [
@@ -19,18 +31,16 @@
 			"prettier --write"
 		]
 	},
-	"keywords": [
-		"Nodejs",
-		"API"
-	],
-	"author": "Herbert Hudson",
-	"license": "MIT",
 	"dependencies": {
-		"express": "^4.17.1",
-		"husky": "^6.0.0"
+		"express": "^4.17.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/herberthudson/valor-metro-quadrado.git"
 	},
 	"devDependencies": {
 		"eslint": "^7.26.0",
+		"husky": "^6.0.0",
 		"jest": "^26.6.3",
 		"lint-staged": "^11.0.0",
 		"nodemon": "^2.0.7",
