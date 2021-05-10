@@ -1,6 +1,6 @@
 {
 	"name": "valor-metro-quadrado",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"description": "Api que retorna o valor do metro quadrado",
 	"author": "Herbert Hudson",
 	"keywords": [
@@ -18,8 +18,7 @@
 		"dev": "nodemon src/index.js --ignore './src/DataBase/'",
 		"lint": "eslint --ext js,jsx,ts,tsx .",
 		"test": "mocha 'src/__tests__/**/*.js' --timeout 10000 --exit",
-		"heroku-prebuild": "npm install -f",
-		"heroku-postbuild": "npm run start"
+		"heroku-prebuild": "npm install -f"
 	},
 	"lint-staged": {
 		"*.{ts,js,tsx,jsx}": [
