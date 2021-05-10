@@ -18,8 +18,7 @@
 		"dev": "nodemon src/index.js --ignore './src/DataBase/'",
 		"lint": "eslint --ext js,jsx,ts,tsx .",
 		"test": "mocha 'src/__tests__/**/*.js' --timeout 10000 --exit",
-		"heroku-prebuild": "npm install -f",
-		"heroku-postbuild": "npm run start"
+		"heroku-prebuild": "npm install -f"
 	},
 	"lint-staged": {
 		"*.{ts,js,tsx,jsx}": [
