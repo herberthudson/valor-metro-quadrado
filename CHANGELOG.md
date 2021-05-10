@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+-   heroku Procfile
+
+### Changed
+
+-   remove post-build heroku
+
+## [1.1.1] - 2021-05-10
+
 ### Fixed
 
 -   revomed husky
