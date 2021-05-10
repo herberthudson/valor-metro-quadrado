@@ -21,7 +21,6 @@ class BaseController {
 	}
 
 	fail(res, error) {
-		console.log(error)
 		res.status(500).json({
 			message: error.toString(),
 		})

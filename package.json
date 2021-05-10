@@ -1,6 +1,6 @@
 {
 	"name": "valor-metro-quadrado",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Api que retorna o valor do metro quadrado",
 	"author": "Herbert Hudson",
 	"keywords": [
@@ -8,13 +8,19 @@
 		"API"
 	],
 	"license": "MIT",
+	"engines": {
+		"node": "16.x",
+		"npm": "7.x"
+	},
 	"main": "src/index.js",
 	"scripts": {
 		"start": "node src/index.js",
 		"dev": "nodemon src/index.js --ignore './src/DataBase/'",
 		"lint": "eslint --ext js,jsx,ts,tsx .",
-		"test": "jest --env node --detectOpenHandles",
-		"prepare": "husky install"
+		"test": "mocha 'src/__tests__/**/*.js' --timeout 10000 --exit",
+		"prepare": "husky install",
+		"heroku-prebuild": "npm install -f",
+		"heroku-postbuild": "npm run start"
 	},
 	"husky": {
 		"hooks": {
@@ -33,17 +39,22 @@
 	},
 	"dependencies": {
 		"express": "^4.17.1",
-		"lowdb": "^1.0.0"
+		"lowdb": "^1.0.0",
+		"swagger-jsdoc": "6.0.1",
+		"swagger-ui-express": "^4.1.6"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/herberthudson/valor-metro-quadrado.git"
 	},
 	"devDependencies": {
+		"chai": "^4.3.4",
+		"chai-http": "^4.3.0",
 		"eslint": "^7.26.0",
 		"husky": "^6.0.0",
 		"jest": "^26.6.3",
 		"lint-staged": "^11.0.0",
+		"mocha": "^8.4.0",
 		"nodemon": "^2.0.7",
 		"prettier": "^2.3.0",
 		"supertest": "^6.1.3"

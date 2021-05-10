@@ -2,7 +2,6 @@ const lowdb = require('lowdb')
 const FileAsync = require('lowdb/adapters/FileAsync')
 const { DATABASE_FILE } = require('../utils/constants')
 
-console.log('DATABASE', DATABASE_FILE)
 class SquareMeterModel {
 	constructor() {
 		this.adapter = new FileAsync(DATABASE_FILE)
