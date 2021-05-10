@@ -24,10 +24,11 @@ const options = {
 const specs = swaggerJsDoc(options)
 
 const app = express()
+const port = process.env.PORT || 4000
 
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(specs))
 
 app.use('/', squareMeterRouter)
-app.listen(4000)
+app.listen(port)
 
 module.exports = app
