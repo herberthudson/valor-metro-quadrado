@@ -11,7 +11,7 @@
 	"main": "src/index.js",
 	"scripts": {
 		"start": "node src/index.js",
-		"dev": "nodemon src/index.ts",
+		"dev": "nodemon src/index.js --ignore './src/DataBase/'",
 		"lint": "eslint --ext js,jsx,ts,tsx .",
 		"test": "jest --env node --detectOpenHandles",
 		"prepare": "husky install"
@@ -32,7 +32,8 @@
 		]
 	},
 	"dependencies": {
-		"express": "^4.17.1"
+		"express": "^4.17.1",
+		"lowdb": "^1.0.0"
 	},
 	"repository": {
 		"type": "git",
