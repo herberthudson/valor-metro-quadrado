@@ -28,6 +28,6 @@ const app = express()
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(specs))
 
 app.use('/', squareMeterRouter)
-app.listen(4000)
+app.listen(process.env || 4000)
 
 module.exports = app
