@@ -1,11 +1,10 @@
-import express from 'express'
+const express = require('express')
+const squareMeterRouter = require('./Routes')
 
 const app = express()
-app.use('/', (req, res) => {
-	res.send('Hello world')
-})
+app.use('/', squareMeterRouter)
 app.listen(4000, () => {
 	console.log(`server running on port 4000`)
 })
 
-export default app
+module.exports = app
