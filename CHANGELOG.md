@@ -11,3 +11,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 -   initial packages: express, eslint, jest, lint-staged, nodemon, prettier, supertest
 -   add test packages, init test config and initial example
+-   create initial tests
