@@ -3,12 +3,11 @@
 	"version": "1.0.0",
 	"description": "Api que retorna o valor do metro quadrado",
 	"main": "src/index.js",
-	"type": "module",
 	"scripts": {
 		"start": "node src/index.js",
 		"dev": "nodemon src/index.ts",
 		"lint": "eslint --ext js,jsx,ts,tsx .",
-		"test": "jest",
+		"test": "jest --env node --detectOpenHandles",
 		"prepare": "husky install"
 	},
 	"lint-staged": {
