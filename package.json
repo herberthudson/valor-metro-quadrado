@@ -1,6 +1,6 @@
 {
 	"name": "valor-metro-quadrado",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"description": "Api que retorna o valor do metro quadrado",
 	"author": "Herbert Hudson",
 	"keywords": [
